@@ -18,7 +18,7 @@ provider "azuread" {
 provider "azurerm" {
   alias = "cli"
   features {}
-  subscription_id = "03cdf759-aa97-4e94-ab63-5acfd7554436"
+  subscription_id = "xxx"
   // Use Azure CLI credentials
   use_msi = false
 }
@@ -51,18 +51,18 @@ output "client_secret" {
 
 resource "azurerm_role_assignment" "example" {
   provider =             azurerm.cli
-  scope                = "/subscriptions/03cdf759-aa97-4e94-ab63-5acfd7554436"
+  scope                = "/subscriptions/xxx"
   role_definition_name = "Contributor"
-  principal_id         = "814659b3-bb65-4b34-a474-59163ac612d5"
+  principal_id         = "subscription_id = "yyy""
 }
 
 
   provider "azurerm" {
   features {}
-  subscription_id = "03cdf759-aa97-4e94-ab63-5acfd7554436"
+  subscription_id = "xxx"
   client_id       = azuread_application.first_project.client_id
   client_secret   = azuread_service_principal_password.password.value
-  tenant_id       = "b07c1c33-9f80-4baa-8a5b-9d080376d3a8"
+  tenant_id       = "subscription_id = "zzz""
 }
 
 # **1. Generate SSH Key**
