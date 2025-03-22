@@ -53,7 +53,7 @@ resource "azurerm_role_assignment" "example" {
   provider =             azurerm.cli
   scope                = "/subscriptions/xxx"
   role_definition_name = "Contributor"
-  principal_id         = "subscription_id = "yyy""
+  principal_id         = "yyy""
 }
 
 
@@ -62,7 +62,7 @@ resource "azurerm_role_assignment" "example" {
   subscription_id = "xxx"
   client_id       = azuread_application.first_project.client_id
   client_secret   = azuread_service_principal_password.password.value
-  tenant_id       = "subscription_id = "zzz""
+  tenant_id       = "zzz""
 }
 
 # **1. Generate SSH Key**
